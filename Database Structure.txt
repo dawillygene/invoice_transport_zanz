@@ -1,0 +1,28 @@
+To create tables with their attributes, we need to extract the relevant information from the provided code. Based on the code you shared, it seems that there are two tables: `invoices` and `invoice_items`. Here are the tables and their attributes:
+
+**Table: invoices**
+| Attribute          | Data Type | Description                                     |
+|--------------------|-----------|-------------------------------------------------|
+| id                 | INT       | Primary key, unique identifier for the invoice |
+| invoice_number     | VARCHAR   | The unique number assigned to each invoice     |
+| date               | DATE      | The date when the invoice was created          |
+| order_number       | VARCHAR   | Order number associated with the invoice        |
+| amount_due         | DECIMAL   | The total amount due for the invoice            |
+| ownerAddress       | VARCHAR   | Address of the owner of the invoice             |
+| recipientAddress   | VARCHAR   | Address of the recipient of the invoice         |
+| account_name       | VARCHAR   | Name of the account associated with the invoice |
+| account_number     | VARCHAR   | Account number associated with the invoice      |
+| tin_number         | VARCHAR   | TIN number associated with the invoice          |
+
+**Table: invoice_items**
+| Attribute | Data Type | Description                                       |
+|-----------|-----------|---------------------------------------------------|
+| id        | INT       | Primary key, unique identifier for each item     |
+| invoice_id| INT       | Foreign key linking the item to its parent invoice|
+| name      | VARCHAR   | Name of the item                                  |
+| description| VARCHAR   | Description of the item                           |
+| rate      | DECIMAL   | Rate or price per unit of the item                |
+| quantity  | INT       | Quantity of the item                              |
+| price     | DECIMAL   | Total price of the item (rate * quantity)         |
+
+These tables represent the structure of the data stored in the database. You can use this information to set up the database tables and establish the necessary relationships between them. Remember to handle data validation and security when implementing the database operations to ensure the safety and accuracy of the information being stored and retrieved.
